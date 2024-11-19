@@ -20,7 +20,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher' // Optional; might not always be necessary
+	implementation 'org.springframework.data:spring-data-jdbc'  // Missing `implementation`
+	implementation 'com.h2database:h2'
 }
 
 tasks.named('test') {
